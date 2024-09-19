@@ -1,0 +1,199 @@
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Ensure the navbar has a background color */
+    border-bottom: 1px solid #ddd; /* Add a subtle bottom border for separation */
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+
+.navbar-menu li.active {
+    border-bottom: 2px solid tomato; /* Active item indicator */
+    color: tomato; /* Active item text color */
+    font-weight: bold; /* Optional: Bold active item text */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 12px; /* Increased border-radius for a more rounded appearance */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    list-style: none;
+    width: auto; /* Adjusted to fit content */
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px; /* Adjusted padding for a more rounded look */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;
+    border-radius: 10px; /* Rounded appearance */
+    background-color: #f9f9f9; /* Subtle background */
+}
+
+.nav-profile-dropdown li img {
+    width: 20px;
+    transition: filter 0.3s;
+}
+
+.nav-profile-dropdown li:hover {
+    background-color: #f0f0f0; /* Lighter color on hover */
+    color: tomato;
+}
+
+.nav-profile-dropdown li.orders {
+    color: #2b7a77; /* Color for Orders button */
+}
+
+.nav-profile-dropdown li.logout {
+    color: #e74c3c; /* Color for Logout button */
+}
+
+.nav-profile-dropdown li:hover img {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(19%) saturate(727%) hue-rotate(352deg) brightness(104%) contrast(91%);
+}
+
+.nav-profile-dropdown li.active {
+    font-weight: bold;
+    color: tomato;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.nav-profile-dropdown li.orders {
+    background-color: #eaf5f4;
+    border-radius: 4px;
+    padding: 12px 15px;
+    color: #2b7a77; /* Color for Orders button */
+    font-weight: bold;
+}
+
+.nav-profile-dropdown li.orders:hover {
+    background-color: #d0f1ec; /* Lighter color on hover */
+}
+
+.nav-profile-dropdown li.logout {
+    background-color: #fbe8e8;
+    border-radius: 4px;
+    padding: 12px 15px;
+    color: #e74c3c; /* Color for Logout button */
+    font-weight: bold;
+}
+
+.nav-profile-dropdown li.logout:hover {
+    background-color: #f1c6c6; /* Lighter color on hover */
+}
+
+@media (max-width:1050px) {
+    .navbar .logo {
+        width: 140px;
+    }
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right {
+        gap: 30px;
+    }
+    .navbar-right img {
+        width: 22px;
+    }
+    .navbar-right button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width:900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right {
+        gap: 20px;
+    }
+    .navbar-right img {
+        width: 20px;
+    }
+    .navbar-right button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:750px) {
+    .navbar-menu {
+        display: none;
+    }
+}
